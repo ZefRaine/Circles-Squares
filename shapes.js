@@ -12,8 +12,6 @@ for (let i = 0; i < 50; i++) {
   document.getElementById('svgSquare').appendChild(rect);
   let side = rect.height.baseVal.value;
   let s = side.toString();
-  console.log(s);
-
   function getArea(side, side, unit) {
     area = side * side;
     return area + unit;
@@ -23,6 +21,8 @@ for (let i = 0; i < 50; i++) {
     var para = document.createElement("P");
     para.innerHTML = `Square: Size = ${s} units, Area = ${getArea(s, s, " units² ")}`;
     document.body.appendChild(para);
+    para.classList.add("mySquare");
+    console.log(`Square: Size = ${s} units, Area = ${getArea(s, s, " units² ")}`)
   }
   displayTest();
 };
@@ -46,7 +46,8 @@ for (let l = 0; l < 50; l++) {
     var para = document.createElement("P");
     para.innerHTML = `Circle: Radius = ${s} units, Area = ${getArea(s, s, " units² ")}`;
     document.body.appendChild(para);
-    console.log(`Circle: Radius = ${s} units, Area = ${getArea(s, s, " units² ")}`)
+    para.classList.add("myCircle");
+    console.log(`Circle: Radius = ${s} units, Arzea = ${getArea(s, s, " units² ")}`)
   }
   displayTest();
 };
