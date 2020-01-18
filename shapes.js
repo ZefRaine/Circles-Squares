@@ -43,8 +43,9 @@ for (let l = 0; l < 50; l++) {
   let r = radius.toString();
 
   function getArea(r, r, unit) {
-    area = r * Math.floor(Math.PI);
-    return area + unit;
+    area = r * Math.PI;
+    let roundArea = parseFloat(area).toFixed(2);
+    return roundArea + unit;
   };
   let Circles = [{
     Radius: r,
