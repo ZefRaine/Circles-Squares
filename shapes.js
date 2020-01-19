@@ -33,7 +33,27 @@ for (let l = 0; l < 50; l++) {
     Radius: radius,
     Area: getArea(radius, radius, null)
   }];
-  console.log(Circles[0]);
+
+  function bubbleSort(a, par) {
+    var swapped;
+    do {
+      swapped = false;
+      for (var i = 0; i < a.length - 1; i++) {
+        if (a[i][par] > a[i + 1][par]) {
+          var temp = a[i];
+          a[i] = a[i + 1];
+          a[i + 1] = temp;
+          swapped = true;
+        }
+      }
+    } while (swapped);
+  }
+
+  bubbleSort(Circles, 'Radius');
+
+  for (i = 0; i < Circles.length; i++) {
+    console.log(Circles[i]);
+  }
   const circle = document.createElement("div");
   circle.classList.add("myCircle");
   document.body.appendChild(circle);
