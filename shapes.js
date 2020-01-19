@@ -1,63 +1,44 @@
-const svgns = "http://www.w3.org/2000/svg";
-
 for (let i = 0; i < 50; i++) {
-  let x = (Math.floor(Math.random() * 100) + 1);
-  const rect = document.createElementNS(svgns, 'rect');
-  rect.setAttributeNS(null, 'height', x);
-  rect.setAttributeNS(null, 'width', x);
-  rect.setAttributeNS(null, 'align', '')
-  rect.setAttributeNS(null, 'stroke-width', '5')
-  rect.setAttributeNS(null, 'fill', 'red');
-  rect.setAttributeNS(null, 'stroke', 'black');
-  document.getElementById('svgSquare').appendChild(rect);
-  let side = rect.height.baseVal.value;
-  let s = side.toString();
+  let size = (Math.floor(Math.random() * 100) + 1);
 
-  function getArea(side, side, unit) {
-    area = side * side;
+  function getArea(size, size, unit) {
+    area = size * size;
     return area + unit;
   };
   let Squares = [{
-    Size: s,
-    Area: getArea(s, s, " units²")
+    Size: size,
+    Area: getArea(size, size, null)
   }];
-  console.log(Squares[0])
-  function displayTest() {
-    var para = document.createElement("P");
-    para.innerHTML = `Square: Size = ${s} units, Area = ${getArea(s, s, " units² ")}`;
-    document.body.appendChild(para);
-    para.classList.add("mySquare");
-    //console.log(`Square: Size = ${s} units, Area = ${getArea(s, s, " units² ")}`)
-  }
-  displayTest();
+  console.log(Squares[0]);
+  const square = document.createElement("div");
+  square.classList.add("mySquare");
+  document.body.appendChild(square);
+  square.style.width = size + 'px';
+  square.style.height = size + 'px';
+  square.style.background = 'red';
+  square.style.border = '1px solid black';
 };
-for (let l = 0; l < 50; l++) {
-  let x = (Math.floor(Math.random() * 100) + 1)
-  const circle = document.createElementNS(svgns, 'circle');
-  circle.setAttributeNS(null, 'r', x);
-  circle.setAttributeNS(null, 'stroke-width', '5')
-  circle.setAttributeNS(null, 'fill', 'blue');
-  circle.setAttributeNS(null, 'stroke', 'black');
-  document.getElementById('svgCircle').appendChild(circle);
-  let radius = [circle.r.baseVal.value];
-  let r = radius.toString();
 
-  function getArea(r, r, unit) {
-    area = r * Math.PI;
-    let roundArea = parseFloat(area).toFixed(2);
-    return roundArea + unit;
+for (let l = 0; l < 50; l++) {
+  let radius = (Math.floor(Math.random() * 100) + 1)
+
+  function getArea(radius, radius, unit) {
+    area = radius * Math.PI;
+    return area + unit;
   };
-  let Circles = [{
-    Radius: r,
-    Area: getArea(r, r, " units²")
+  Array.from({
+    length: 50
+  }, () => Math.floor(Math.random() * 100) + 1);
+  var Circles = [{
+    Radius: radius,
+    Area: getArea(radius, radius, null)
   }];
-  console.log(Circles[0])
-  function displayTest() {
-    var para = document.createElement("P");
-    para.innerHTML = `Circle: Radius = ${r} units, Area = ${getArea(r, r, " units² ")}`;
-    document.body.appendChild(para);
-    para.classList.add("myCircle");
-    //console.log(`Circle: Radius = ${r} units, Arzea = ${getArea(r, r, " units² ")}`)
-  }
-  displayTest();
+  console.log(Circles[0]);
+  const circle = document.createElement("div");
+  circle.classList.add("myCircle");
+  document.body.appendChild(circle);
+  circle.style.width = radius + 'px';
+  circle.style.height = radius + 'px';
+  circle.style.background = 'blue';
+  circle.style.border = '1px solid black';
 };
