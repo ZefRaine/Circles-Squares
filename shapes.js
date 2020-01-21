@@ -10,12 +10,12 @@ $(document).ready(function () {
 
   for (var i = 0; i < 50; i++) {
     var x = arr[i];
-    //console.log(x);
     var size = x.toString();
 
     function getArea(size, size, unit) {
       area = size * size;
-      return area + unit;
+      xArea = area.toString()
+      return xArea;
     };
     let Squares = [{
       Size: size,
@@ -43,12 +43,11 @@ $(document).ready(function () {
 
   for (var i = 0; i < 50; i++) {
     var x = arr[i];
-    //console.log(x);
     var radius = x.toString();
 
     function getArea(radius, radius, unit) {
       area = radius * Math.PI;
-      return area + unit;
+      return parseFloat(area).toFixed(2);
     };
     let Circles = [{
       Radius: radius,
