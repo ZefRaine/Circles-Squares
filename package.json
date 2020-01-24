@@ -1,0 +1,26 @@
+{
+  "name": "circles-squares",
+  "version": "1.0.0",
+  "description": "An application that renders and sorts randomly generated circles and squares. Also console logs the sorted measurements and areas of the generated shapes.",
+  "main": "shapes.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^3.8.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZefRaine/Circles-Squares.git"
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZefRaine/Circles-Squares/issues"
+  },
+  "homepage": "https://github.com/ZefRaine/Circles-Squares#readme"
+}
