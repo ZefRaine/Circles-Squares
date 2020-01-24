@@ -34,15 +34,18 @@ $(document).ready(() => {
     const square = document.createElement("div");
     square.classList.add("mySquare");
     document.body.appendChild(square);
+    $(".mySquare").appendTo(".squareSpace");
     square.style.width = size + 'px';
     square.style.height = size + 'px';
     square.style.background = 'red';
     square.style.border = '1px solid black';
     circle.classList.add("myCircle");
     document.body.appendChild(circle);
-    circle.style.width = size + 'px';
-    circle.style.height = size + 'px';
+    $(".myCircle").appendTo(".circleSpace");
+    circle.style.width = size * 2 + 'px';
+    circle.style.height = size * 2 + 'px';
     circle.style.background = 'blue';
     circle.style.border = '1px solid black';
+    circle.style.borderRadius = '100%';
   }
 });

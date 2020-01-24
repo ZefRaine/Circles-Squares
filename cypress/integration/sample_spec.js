@@ -6,14 +6,20 @@ context('Shapes', () => {
             .should('include', '/')
     })
     describe('Shape Count', () => {
-        it('clicks the link "type"', () => {
+        it('Count total of shapes', () => {
             cy.get('.mySquare')
             cy.get('.myCircle')
         })
     })
     describe('Color Check', () => {
-        it('clicks the link "type"', () => {
+        it('Checks for valid hex code', () => {
             cy.get('.mySquare').should('have.css', 'background-color', 'rgb(255, 0, 0)')
+            cy.get('.myCircle').should('have.css', 'background-color', 'rgb(0, 0, 255)')
+        })
+    })
+    describe('Size Check', () => {
+        it('Checks for size of shapes', () => {
+            cy.get('.mySquare').its('length').should('be.gt', 2)
             cy.get('.myCircle').should('have.css', 'background-color', 'rgb(0, 0, 255)')
         })
     })
