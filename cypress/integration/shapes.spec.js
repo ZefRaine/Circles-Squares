@@ -17,10 +17,4 @@ context('Shapes', () => {
             cy.get('.myCircle').should('have.css', 'background-color', 'rgb(0, 0, 255)')
         })
     })
-    describe('Size Check', () => {
-        it('Checks for size of shapes', () => {
-            // cy.get('.mySquare').its('length').should('be.gt', 2)
-            // cy.get('.myCircle').should('have.css', 'background-color', 'rgb(0, 0, 255)')
-        })
-    })
 })
