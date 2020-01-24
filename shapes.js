@@ -32,16 +32,14 @@ $(document).ready(() => {
     console.log(Shapes[1]);
     const circle = document.createElement("div");
     const square = document.createElement("div");
-    square.classList.add("mySquare");
     document.body.appendChild(square);
-    $(".mySquare").appendTo(".squareSpace");
+    $(".mySquare").prependTo(".shapeSpace");
     square.style.width = size + 'px';
     square.style.height = size + 'px';
     square.style.background = 'red';
     square.style.border = '1px solid black';
-    circle.classList.add("myCircle");
     document.body.appendChild(circle);
-    $(".myCircle").appendTo(".circleSpace");
+    $(".myCircle").appendTo(".shapeSpace");
     circle.style.width = size * 2 + 'px';
     circle.style.height = size * 2 + 'px';
     circle.style.background = 'blue';
