@@ -14,7 +14,7 @@ $(document).ready(function () {
 
     function getArea(size, size, unit) {
       area = size * size;
-      xArea = area.toString(); 
+      xArea = area.toString();
       return xArea;
     };
     let Shapes = [{
@@ -25,7 +25,7 @@ $(document).ready(function () {
     }, {
       Circle: {
         Radius: size,
-        Area: parseFloat(getArea(size, size, null)*Math.PI).toFixed(2)
+        Area: parseFloat(getArea(size, size, null) * Math.PI).toFixed(2)
       }
     }];
     console.log(Shapes[0]);
